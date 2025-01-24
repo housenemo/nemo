@@ -13,6 +13,7 @@ import checkin from "../../assets/checkin.png";
 import checkout from "../../assets/checkout.png";
 import guest from "../../assets/guest.png";
 import amenity from "../../assets/amenity.png";
+import nemologo from "../../assets/nemologo.png";
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Autoplay } from "swiper/modules";
@@ -20,7 +21,7 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import { Map, MapMarker } from "react-kakao-maps-sdk";
 import { useNavigate } from "react-router-dom";
-import { isDesktop } from "react-device-detect";
+import { isDesktop, isEdge } from "react-device-detect";
 
 declare global {
   interface Window {
@@ -128,14 +129,21 @@ function Home() {
                 <div>{page}/5</div>
               </div>
             </div>
-            {/* <div className={styles.progressWrap}>
-              <div className={styles.progressbarWrap}>
-                <div
-                  className={styles.progressbar}
-                  style={{ width: `${progress}%` }}
-                ></div>
+            {isDesktop && (
+              <div className={styles.progressWrap}>
+                <div className={styles.progressbarWrap}>
+                  <div
+                    className={styles.progressbar}
+                    style={{ width: `${progress}%` }}
+                  ></div>
+                </div>
               </div>
-            </div> */}
+            )}
+            <div className={styles.logoWrap}>
+              <img src={nemologo} alt="nemologo" />
+
+              {/* <span>NEMOHOUSE</span> */}
+            </div>
           </div>
           <div className={styles.contentWrap}>
             <div className={styles.infoWrap}>

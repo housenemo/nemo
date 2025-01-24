@@ -213,8 +213,8 @@ function Reservation() {
               <div>노약자와 어린이는 꼭 보호자와 동반 입수합니다.</div>
               <div>모든 음식물은 반입 금지입니다.</div>
               <div>
-                기계적인 결함으로 인해 미온수 수영을 못하실경우 50,000원
-                환불해드리고있습니다.
+                기계적인 결함으로 인해 미온수 수영을 못하실 경우 50,000원
+                환불해드리고 있습니다.
               </div>
             </div>
           </div>
@@ -261,7 +261,7 @@ function Reservation() {
                   <div>4일전 ~ 당일취소</div>
                 </div>
                 <div className={styles.bottom}>
-                  <div>환불액</div>
+                  <div className={styles.grey}>환불액</div>
                   <div>100%</div>
                   <div>90%</div>
                   <div>80%</div>
