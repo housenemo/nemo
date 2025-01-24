@@ -1,0 +1,39 @@
+.footerContainer {
+  padding: 34px 30px;
+  height: 150px;
+  box-sizing: border-box;
+  background: #fff;
+  .footerWrap {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    div > span {
+      font-weight: 400;
+      // font-size: 10px;
+      font-size: 12px;
+      line-height: 15px;
+    }
+    .titleWrap {
+      span {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 17px;
+        letter-spacing: 1.5px;
+        font-family: "DungGeunMo";
+      }
+    }
+    .socialWrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      div {
+        display: flex;
+        gap: 5px;
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}

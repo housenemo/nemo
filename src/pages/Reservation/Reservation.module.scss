@@ -1,0 +1,110 @@
+.resContainer {
+  min-height: calc(100vh - 200px);
+  .alertWrap {
+    padding: 20px 0;
+    text-align: center;
+    & > span {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+  .resWrap {
+    display: flex;
+    flex-direction: column;
+    .contentWrap {
+      & > div:first-child {
+        padding: 0 20px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        background: #f0f1f3;
+        cursor: pointer;
+        span {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 18px;
+        }
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      .content {
+        padding: 0 20px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        .grey {
+          color: #888888;
+        }
+        .red {
+          color: #f13434;
+        }
+        & > div {
+          display: flex;
+          gap: 5px;
+          flex-direction: column;
+          padding: 16px 0;
+          border-bottom: 0.5px solid rgb(0, 0, 0, 25%);
+          &:last-child {
+            padding: 16px 0 0;
+            border: none;
+          }
+        }
+        .refund {
+          font-size: 12px;
+          letter-spacing: -0.5px;
+          text-align: center;
+          .top {
+            padding: 0 0 8px;
+            border-bottom: 0.5px solid rgb(0, 0, 0, 25%);
+          }
+          .bottom {
+            padding: 8px 0 0;
+          }
+          .top,
+          .bottom {
+            display: flex;
+            & > div {
+              width: calc((100% - 75px) / 7);
+              &:last-child {
+                width: 75px;
+                font-weight: 600;
+                letter-spacing: -1px;
+              }
+            }
+          }
+        }
+        .subTextWrap {
+          font-size: 12px;
+          line-height: 16px;
+        }
+        &.contentOpenWrap {
+          padding: 0 20px 50px;
+          opacity: 1;
+          max-height: 2000px;
+          overflow: visible;
+          transition: max-height 2s, opacity 1s ease-in-out;
+        }
+        &.refundWrap {
+          & > div {
+            gap: 0;
+            &:last-child {
+              padding: 0;
+              border: none;
+            }
+          }
+          & > div:first-child {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}
