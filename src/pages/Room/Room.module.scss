@@ -118,7 +118,7 @@
         }
         .infoContent {
           opacity: 0;
-          height: 0;
+          max-height: 0;
           overflow: hidden;
           // transition: padding 0.5s, opacity 0.5s ease-in-out;
           font-weight: 400;
@@ -127,10 +127,10 @@
           &.open {
             padding: 0 0 20px;
             opacity: 1;
-            height: auto;
+            max-height: 60px;
             box-sizing: border-box;
             overflow: hidden;
-            transition: padding 0.5s, opacity 0.5s ease-in-out;
+            transition: max-height 0.5s, opacity 0.5s ease-in-out;
           }
         }
       }

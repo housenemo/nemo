@@ -59,6 +59,18 @@
   font-weight: 400;
   font-style: normal;
 }
+@font-face {
+  font-family: 'UhBee';
+  src: url('./fonts/UhBee/UhBee mysen.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'UhBee';
+  src: url('./fonts/UhBee/UhBee mysen Bold.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
 
 body {
   margin: 0;

@@ -66,19 +66,19 @@
     .mainBannerWrap {
       position: relative;
       .bannerWrap {
-        min-height: calc(100vh - 50px);
+        min-height: 100vh;
         background-color: transparent;
         img {
           width: 100%;
-          min-height: calc(100vh - 50px);
-          max-height: calc(100vh - 50px);
+          min-height: 100vh;
+          max-height: 100vh;
           object-fit: cover;
         }
       }
       .paginationWrap {
         position: absolute;
         z-index: 10;
-        top: 15px;
+        top: 65px;
         left: 20px;
         display: flex;
         align-items: center;

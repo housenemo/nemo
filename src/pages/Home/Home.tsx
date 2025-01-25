@@ -14,7 +14,7 @@ import checkout from "../../assets/checkout.png";
 import guest from "../../assets/guest.png";
 import amenity from "../../assets/amenity.png";
 import nemologo from "../../assets/nemologo.png";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -22,6 +22,7 @@ import "swiper/css/autoplay";
 import { Map, MapMarker } from "react-kakao-maps-sdk";
 import { useNavigate } from "react-router-dom";
 import { isDesktop, isEdge } from "react-device-detect";
+import { throttle } from "lodash";
 
 declare global {
   interface Window {
@@ -29,18 +30,33 @@ declare global {
   }
 }
 function Home() {
-  const mainArr = [stay1, stay3, stay4, stay5, stay2];
-  const stayArr = [test, test, test, test];
   const navigate = useNavigate();
+  const mainRef = useRef<HTMLDivElement>(null);
+  const [mainTop, setMainTop] = useState(true);
   const [progress, setProgress] = useState(0);
   const [page, setPage] = useState(0);
 
+  const throttledScroll = useMemo(
+    () =>
+      throttle(() => {
+        if (!mainRef.current) return;
+        if (window.scrollY > mainRef.current.offsetTop) setMainTop(false);
+        else setMainTop(true);
+      }, 500),
+    []
+  );
+
+  useEffect(() => {
+    window.addEventListener("scroll", throttledScroll);
+    return () => {
+      window.removeEventListener("scroll", throttledScroll);
+    };
+  }, [throttledScroll]);
+
   const bannerList = [
-    { image: stay1, msg: "test1\ndd", url: "/" },
+    { image: stay5, msg: "test1\ndd", url: "/" },
     { image: test },
-    { image: stay3 },
     { image: stay4 },
-    { image: stay5 },
   ];
 
   const handleSlideChange = (swiper: any) => {
@@ -95,7 +111,7 @@ function Home() {
   // }, []);
   return (
     <>
-      <Header />
+      <Header mainTop={mainTop} />
       <div
         className={`${styles.homeContainer} ${
           isDesktop ? styles.isDesktop : ""
@@ -126,7 +142,9 @@ function Home() {
             </div>
             <div className={styles.paginationWrap}>
               <div className={styles.pageWrap}>
-                <div>{page}/5</div>
+                <div>
+                  {page}/{bannerList.length}
+                </div>
               </div>
             </div>
             {isDesktop && (
@@ -139,7 +157,7 @@ function Home() {
                 </div>
               </div>
             )}
-            <div className={styles.logoWrap}>
+            <div ref={mainRef} className={styles.logoWrap}>
               <img src={nemologo} alt="nemologo" />
 
               {/* <span>NEMOHOUSE</span> */}
