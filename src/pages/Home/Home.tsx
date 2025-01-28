@@ -2,6 +2,14 @@ import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import styles from "./Home.module.scss";
 import { ScrollAnimation } from "@lasbe/react-scroll-animation";
+import main1 from "../../assets/main/main1.jpg";
+import main2 from "../../assets/main/main2.jpg";
+import main3 from "../../assets/main/main3.jpg";
+import mliving1 from "../../assets/main/mliving1.jpg";
+import mliving2 from "../../assets/main/mliving2.jpg";
+import mroom1 from "../../assets/main/mroom1.jpg";
+import mroom2 from "../../assets/main/mroom2.jpg";
+import pool2 from "../../assets/room/pool2.jpg";
 import stay1 from "../../assets/main/stay1.jpg";
 import stay2 from "../../assets/main/stay2.jpg";
 import stay3 from "../../assets/main/stay3.jpg";
@@ -53,11 +61,7 @@ function Home() {
     };
   }, [throttledScroll]);
 
-  const bannerList = [
-    { image: stay5, msg: "test1\ndd", url: "/" },
-    { image: test },
-    { image: stay4 },
-  ];
+  const bannerList = [{ image: mroom2, msg: "", url: "/" }, { image: main1 }];
 
   const handleSlideChange = (swiper: any) => {
     switch (swiper.realIndex) {
@@ -236,7 +240,7 @@ function Home() {
                   delay={0}
                   repeat={true}
                 >
-                  <img src={stay5} alt="room" />
+                  <img src={mliving2} alt="room" />
                 </ScrollAnimation>
                 <ScrollAnimation
                   startingPoint="right"
@@ -246,7 +250,7 @@ function Home() {
                   repeat={true}
                 >
                   <div className={styles.titleWrap}>
-                    <span>Room</span>
+                    <span>Kitchen and Living</span>
                   </div>
                 </ScrollAnimation>
               </div>
@@ -259,7 +263,7 @@ function Home() {
                   repeat={true}
                 >
                   <div className={styles.leftWrap}>
-                    <img src={stay5} alt="room" />
+                    <img src={mroom2} alt="room" />
                   </div>
                 </ScrollAnimation>
                 <ScrollAnimation
@@ -270,9 +274,9 @@ function Home() {
                   repeat={true}
                 >
                   <div className={styles.rightWrap}>
-                    <img src={stay5} alt="room" />
+                    <img src={mroom1} alt="room" />
                     <div className={styles.titleWrap}>
-                      <span>Kitchen and Living</span>
+                      <span>Room </span>
                     </div>
                   </div>
                 </ScrollAnimation>
@@ -286,9 +290,9 @@ function Home() {
               >
                 <div className={styles.poolWrap}>
                   <div className={styles.poolImgWrap}>
-                    <img src={stay5} alt="room" />
-                    <img src={stay5} alt="room" />
-                    <img src={stay5} alt="room" />
+                    <img src={pool2} alt="room" />
+                    <img src={main2} alt="room" />
+                    <img src={main3} alt="room" />
                   </div>
                   <div className={styles.titleWrap}>
                     <span>Pool and Outdoor</span>

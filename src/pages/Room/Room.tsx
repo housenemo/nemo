@@ -17,16 +17,17 @@ import room4 from "../../assets/room/room4.jpg";
 import room5 from "../../assets/room/room5.jpg";
 import room6 from "../../assets/room/room6.jpg";
 import room7 from "../../assets/room/room7.jpg";
-import room8 from "../../assets/room/room8.jpg";
-import room9 from "../../assets/room/room9.jpg";
+import mliving2 from "../../assets/main/mliving2.jpg";
 import living1 from "../../assets/room/living1.jpg";
 import living2 from "../../assets/room/living2.jpg";
+import living3 from "../../assets/room/living3.jpg";
 import kitchen1 from "../../assets/room/kitchen1.jpg";
 import kitchen2 from "../../assets/room/kitchen2.jpg";
 import kitchen3 from "../../assets/room/kitchen3.jpg";
 import pool1 from "../../assets/room/pool1.jpg";
 import pool2 from "../../assets/room/pool2.jpg";
 import pool3 from "../../assets/room/pool3.jpg";
+import main1 from "../../assets/main/main1.jpg";
 import bathroom1 from "../../assets/room/bathroom1.jpg";
 import outdoor1 from "../../assets/room/outdoor1.jpg";
 import outdoor2 from "../../assets/room/outdoor2.jpg";
@@ -35,6 +36,7 @@ import outdoor4 from "../../assets/room/outdoor4.jpg";
 import outdoor5 from "../../assets/room/outdoor5.jpg";
 import outdoor6 from "../../assets/room/outdoor6.jpg";
 import outdoor7 from "../../assets/room/outdoor7.jpg";
+import outdoor10 from "../../assets/room/outdoor10.jpg";
 
 function Room() {
   const [currentMenu, setCurrentMenu] = useState("room");
@@ -84,30 +86,22 @@ function Room() {
   useEffect(() => {
     if (!currentMenu) return;
     if (currentMenu === "room") {
-      setRoomArr([room1, room2]);
+      setRoomArr([room1, room2, room3, room4, room5, room6, room7]);
     }
     if (currentMenu === "bathroom") {
       setRoomArr([bathroom1]);
     }
     if (currentMenu === "kitchen") {
-      setRoomArr([kitchen1, kitchen2, kitchen3]);
+      setRoomArr([mliving2, kitchen3]);
     }
     if (currentMenu === "living") {
-      setRoomArr([living1]);
+      setRoomArr([living3]);
     }
     if (currentMenu === "pool") {
-      setRoomArr([pool1]);
+      setRoomArr([pool2]);
     }
     if (currentMenu === "outdoor") {
-      setRoomArr([
-        outdoor1,
-        outdoor2,
-        outdoor3,
-        outdoor4,
-        outdoor5,
-        outdoor6,
-        outdoor7,
-      ]);
+      setRoomArr([main1, outdoor2, outdoor10, outdoor5]);
     }
   }, [currentMenu]);
 

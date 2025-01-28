@@ -15,7 +15,7 @@ function Footer() {
           <span>경상북도 경주 진티길 24, 네모</span>
         </div>
         <div>
-          <span>01-1000-1000</span>
+          <span>328-09-02947</span>
         </div>
         <div className={styles.socialWrap}>
           <span>© 2025. nemo All rights reserved.</span>
