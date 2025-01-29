@@ -2,7 +2,7 @@ import styles from "./Room.module.scss";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import { useEffect, useState } from "react";
-import { isMobile } from "react-device-detect";
+import { isDesktop, isMobile } from "react-device-detect";
 import { ScrollAnimation } from "@lasbe/react-scroll-animation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Autoplay } from "swiper/modules";
@@ -17,6 +17,9 @@ import room4 from "../../assets/room/room4.jpg";
 import room5 from "../../assets/room/room5.jpg";
 import room6 from "../../assets/room/room6.jpg";
 import room7 from "../../assets/room/room7.jpg";
+import room8 from "../../assets/room/room8.jpg";
+import room9 from "../../assets/room/room9.jpg";
+import room10 from "../../assets/room/room10.jpg";
 import mliving2 from "../../assets/main/mliving2.jpg";
 import living1 from "../../assets/room/living1.jpg";
 import living2 from "../../assets/room/living2.jpg";
@@ -24,6 +27,8 @@ import living3 from "../../assets/room/living3.jpg";
 import kitchen1 from "../../assets/room/kitchen1.jpg";
 import kitchen2 from "../../assets/room/kitchen2.jpg";
 import kitchen3 from "../../assets/room/kitchen3.jpg";
+import kitchen4 from "../../assets/room/kitchen4.jpg";
+import kitchen5 from "../../assets/room/kitchen5.jpg";
 import pool1 from "../../assets/room/pool1.jpg";
 import pool2 from "../../assets/room/pool2.jpg";
 import pool3 from "../../assets/room/pool3.jpg";
@@ -36,7 +41,6 @@ import outdoor4 from "../../assets/room/outdoor4.jpg";
 import outdoor5 from "../../assets/room/outdoor5.jpg";
 import outdoor6 from "../../assets/room/outdoor6.jpg";
 import outdoor7 from "../../assets/room/outdoor7.jpg";
-import outdoor10 from "../../assets/room/outdoor10.jpg";
 
 function Room() {
   const [currentMenu, setCurrentMenu] = useState("room");
@@ -53,7 +57,7 @@ function Room() {
     {
       id: "bathroom",
       title: "Bathroom",
-      content: "샴푸, 컨디셔너, 바디워시, 칫솔, 치약, 비누, 바디타올",
+      content: "샴푸, 컨디셔너, 바디워시, 칫솔, 치약, 비누",
     },
     {
       id: "kitchen",
@@ -74,7 +78,7 @@ function Room() {
     {
       id: "outdoor",
       title: "Outdoor",
-      content: "바베큐장, 테라스, 마당",
+      content: "바베큐장, 테라스, 마당, 주차장",
     },
   ];
 
@@ -86,22 +90,41 @@ function Room() {
   useEffect(() => {
     if (!currentMenu) return;
     if (currentMenu === "room") {
-      setRoomArr([room1, room2, room3, room4, room5, room6, room7]);
+      setRoomArr([
+        room1,
+        room2,
+        room3,
+        room4,
+        room5,
+        room6,
+        room7,
+        room8,
+        room9,
+        room10,
+      ]);
     }
     if (currentMenu === "bathroom") {
       setRoomArr([bathroom1]);
     }
     if (currentMenu === "kitchen") {
-      setRoomArr([mliving2, kitchen3]);
+      setRoomArr([kitchen5, mliving2, kitchen3, kitchen4]);
     }
     if (currentMenu === "living") {
       setRoomArr([living3]);
     }
     if (currentMenu === "pool") {
-      setRoomArr([pool2]);
+      setRoomArr([pool1, pool2, pool3]);
     }
     if (currentMenu === "outdoor") {
-      setRoomArr([main1, outdoor2, outdoor10, outdoor5]);
+      setRoomArr([
+        main1,
+        outdoor1,
+        outdoor2,
+        outdoor4,
+        outdoor5,
+        outdoor6,
+        outdoor7,
+      ]);
     }
   }, [currentMenu]);
 
@@ -110,15 +133,26 @@ function Room() {
     setRoomArr([
       room1,
       room2,
+      room3,
+      room4,
+      room5,
+      room6,
+      room7,
+      room8,
+      room9,
+      room10,
       bathroom1,
-      kitchen1,
-      kitchen2,
+      kitchen5,
+      mliving2,
       kitchen3,
-      living1,
+      kitchen4,
+      living3,
       pool1,
+      pool2,
+      pool3,
+      main1,
       outdoor1,
       outdoor2,
-      outdoor3,
       outdoor4,
       outdoor5,
       outdoor6,
@@ -127,24 +161,17 @@ function Room() {
   }, [openMenu]);
 
   const handleSlideChange = (swiper: any) => {
-    switch (swiper.realIndex) {
-      case 0:
-        return setPage(swiper.realIndex + 1);
-      case 1:
-        return setPage(swiper.realIndex + 1);
-      case 2:
-        return setPage(swiper.realIndex + 1);
-      case 3:
-        return setPage(swiper.realIndex + 1);
-      case 4:
-        return setPage(swiper.realIndex + 1);
-    }
+    setPage(swiper.realIndex + 1);
   };
 
   return (
     <>
       <Header />
-      <div className={styles.roomContainer}>
+      <div
+        className={`${styles.roomContainer} ${
+          isDesktop ? styles.isDesktop : ""
+        }`}
+      >
         <div className={styles.roomWrap}>
           <div className={styles.roomImgWrap}>
             <div className={styles.paginationWrap}>

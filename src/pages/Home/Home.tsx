@@ -9,18 +9,11 @@ import mliving1 from "../../assets/main/mliving1.jpg";
 import mliving2 from "../../assets/main/mliving2.jpg";
 import mroom1 from "../../assets/main/mroom1.jpg";
 import mroom2 from "../../assets/main/mroom2.jpg";
+import main10 from "../../assets/main/main10.jpg";
+import room2 from "../../assets/room/room2.jpg";
 import pool2 from "../../assets/room/pool2.jpg";
-import stay1 from "../../assets/main/stay1.jpg";
-import stay2 from "../../assets/main/stay2.jpg";
-import stay3 from "../../assets/main/stay3.jpg";
-import stay4 from "../../assets/main/stay4.jpg";
-import stay5 from "../../assets/main/stay5.jpg";
-import test from "../../assets/room.jpeg";
-import wow from "../../assets/wow.jpeg";
-import checkin from "../../assets/checkin.png";
-import checkout from "../../assets/checkout.png";
-import guest from "../../assets/guest.png";
-import amenity from "../../assets/amenity.png";
+import room8 from "../../assets/room/room8.jpg";
+import kitchen5 from "../../assets/room/kitchen5.jpg";
 import nemologo from "../../assets/nemologo.png";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -61,7 +54,9 @@ function Home() {
     };
   }, [throttledScroll]);
 
-  const bannerList = [{ image: mroom2, msg: "", url: "/" }, { image: main1 }];
+  const bannerList = [{ image: main10, msg: "", url: "/" }, { image: main1 }];
+  // const bannerList = [{ image: mroom2, msg: "", url: "/" }];
+  // const bannerList = [{ image: main10, msg: "", url: "/" }];
 
   const handleSlideChange = (swiper: any) => {
     switch (swiper.realIndex) {
@@ -144,14 +139,14 @@ function Home() {
                 ))}
               </Swiper>
             </div>
-            <div className={styles.paginationWrap}>
+            {/* <div className={styles.paginationWrap}>
               <div className={styles.pageWrap}>
                 <div>
                   {page}/{bannerList.length}
                 </div>
               </div>
-            </div>
-            {isDesktop && (
+            </div> */}
+            {/* {isDesktop && (
               <div className={styles.progressWrap}>
                 <div className={styles.progressbarWrap}>
                   <div
@@ -160,7 +155,7 @@ function Home() {
                   ></div>
                 </div>
               </div>
-            )}
+            )} */}
             <div ref={mainRef} className={styles.logoWrap}>
               <img src={nemologo} alt="nemologo" />
 
@@ -240,7 +235,7 @@ function Home() {
                   delay={0}
                   repeat={true}
                 >
-                  <img src={mliving2} alt="room" />
+                  <img src={kitchen5} alt="room" />
                 </ScrollAnimation>
                 <ScrollAnimation
                   startingPoint="right"
@@ -274,7 +269,7 @@ function Home() {
                   repeat={true}
                 >
                   <div className={styles.rightWrap}>
-                    <img src={mroom1} alt="room" />
+                    <img src={room8} alt="room" />
                     <div className={styles.titleWrap}>
                       <span>Room </span>
                     </div>
@@ -290,9 +285,9 @@ function Home() {
               >
                 <div className={styles.poolWrap}>
                   <div className={styles.poolImgWrap}>
-                    <img src={pool2} alt="room" />
-                    <img src={main2} alt="room" />
+                    <img src={main1} alt="room" />
                     <img src={main3} alt="room" />
+                    <img src={pool2} alt="room" />
                   </div>
                   <div className={styles.titleWrap}>
                     <span>Pool and Outdoor</span>

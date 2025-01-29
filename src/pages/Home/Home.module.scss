@@ -7,11 +7,16 @@
     .homeWrap {
       .mainBannerWrap {
         .bannerWrap {
+          // margin: 0 auto;
           min-height: auto;
           img {
+            width: 100%;
             min-height: auto;
-            max-height: 1000px;
-            aspect-ratio: 761/600;
+            max-height: auto;
+            object-fit: cover;
+            // min-height: auto;
+            // max-height: 1200px;
+            // aspect-ratio: 761/600;
           }
         }
         .progressWrap {
@@ -70,10 +75,10 @@
         min-height: 100vh;
         background-color: transparent;
         img {
-          width: 100%;
+          // width: 100%;
           min-height: 100vh;
           max-height: 100vh;
-          object-fit: cover;
+          // object-fit: cover;
         }
       }
       .paginationWrap {

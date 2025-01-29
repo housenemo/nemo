@@ -5,6 +5,25 @@
   margin: 0 auto;
   max-width: 100%;
   overflow: hidden;
+  &.isDesktop {
+    .roomWrap {
+      .roomImgWrap {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        border: 1px solid #e2e2e2;
+        img {
+          // width: 100%;
+          // height: auto;
+          // max-height: 1700px;
+          display: flex;
+          aspect-ratio: 1/1;
+          // object-fit: contain;
+          object-fit: fill;
+        }
+      }
+    }
+  }
   .roomWrap {
     display: flex;
     flex-direction: column;
@@ -54,7 +73,7 @@
       }
       img {
         width: 100%;
-        aspect-ratio: 1/1;
+        aspect-ratio: 1/0.75;
         object-fit: cover;
       }
     }
