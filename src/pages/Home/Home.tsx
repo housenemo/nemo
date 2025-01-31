@@ -9,7 +9,6 @@ import mliving1 from "../../assets/main/mliving1.jpg";
 import mliving2 from "../../assets/main/mliving2.jpg";
 import mroom1 from "../../assets/main/mroom1.jpg";
 import mroom2 from "../../assets/main/mroom2.jpg";
-import main10 from "../../assets/main/main10.jpg";
 import room2 from "../../assets/room/room2.jpg";
 import pool2 from "../../assets/room/pool2.jpg";
 import room8 from "../../assets/room/room8.jpg";
@@ -54,9 +53,7 @@ function Home() {
     };
   }, [throttledScroll]);
 
-  const bannerList = [{ image: main10, msg: "", url: "/" }, { image: main1 }];
-  // const bannerList = [{ image: mroom2, msg: "", url: "/" }];
-  // const bannerList = [{ image: main10, msg: "", url: "/" }];
+  const bannerList = [{ image: mroom2, msg: "", url: "/" }, { image: main1 }];
 
   const handleSlideChange = (swiper: any) => {
     switch (swiper.realIndex) {
