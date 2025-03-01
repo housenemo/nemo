@@ -23,6 +23,7 @@ import { Map, MapMarker } from "react-kakao-maps-sdk";
 import { useNavigate } from "react-router-dom";
 import { isDesktop, isEdge } from "react-device-detect";
 import { throttle } from "lodash";
+import MapBox from "../../hook/Map/Map";
 
 declare global {
   interface Window {
@@ -95,8 +96,8 @@ function Home() {
   //     imageSize,
   //     imageOption
   //   );
-  //   var markerPosition = new window.kakao.maps.LatLng(35.7815838, 129.3284443);
-  //   map.setCenter(new window.kakao.maps.LatLng(35.7815838, 129.3284443));
+  //   var markerPosition = new window.kakao.maps.LatLng(129.3284443, 35.7815837);
+  //   map.setCenter(new window.kakao.maps.LatLng(129.3284443, 35.7815837));
   //   var centerPosition = map.getCenter();
   //   var marker = new window.kakao.maps.Marker({
   //     position: centerPosition,
@@ -105,6 +106,7 @@ function Home() {
 
   //   marker.setMap(map);
   // }, []);
+
   return (
     <>
       <Header mainTop={mainTop} />
@@ -160,7 +162,22 @@ function Home() {
             </div>
           </div>
           <div className={styles.contentWrap}>
-            <div className={styles.infoWrap}>
+            <div className={styles.mapWrap}>
+              {/* <div
+                id="map"
+                style={{
+                  width: "100vw",
+                  height: "100vh",
+                }}
+              ></div> */}
+              {/* <Map
+                center={{ lat: 129.3284443, lng: 35.7815837 }}
+                style={{ width: "1000px", height: "600px" }}
+                level={3}
+              ></Map> */}
+              <MapBox />
+            </div>
+            {/* <div className={styles.infoWrap}>
               <ScrollAnimation
                 startingPoint="left"
                 duration={5}
@@ -172,14 +189,12 @@ function Home() {
                   <span>
                     네모하우스,
                     <br />
-                    {/* 특별한 경험을, */}
                     특별한 여행의 시작
                   </span>
                   <span>in Gyeongju</span>
                 </div>
               </ScrollAnimation>
               <div className={styles.turnTitle}>
-                {/* <span>NEMO HOUSE</span> */}
                 <div className={styles.sliderContainer}>
                   <div className={styles.sliderWrapper}>
                     <div className={styles.slidingText}>
@@ -219,7 +234,6 @@ function Home() {
                   <br /> 머무는 동안 기쁨이 가득한 추억을 선물하고 싶습니다
                   <br /> 가족, 친구들과 함께하는 소중한 순간을 <span>네모</span>
                   와 함께해요
-                  {/* <br /> 가족, 친구, 지인과의 추억을 네모와 함께해요 */}
                 </div>
               </ScrollAnimation>
             </div>
@@ -291,7 +305,7 @@ function Home() {
                   </div>
                 </div>
               </ScrollAnimation>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

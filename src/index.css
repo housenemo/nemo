@@ -71,6 +71,42 @@
   font-weight: 500;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Myeongjo';
+  src: url('./fonts/Myeongjo/NanumMyeongjo-YetHangul.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gowun';
+  src: url('./fonts/Gowun/GowunBatang-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gowun';
+  src: url('./fonts/Gowun/GowunBatang-Bold.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gowun';
+  src: url('./fonts/Gowun/GowunBatang-Bold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gowun';
+  src: url('./fonts/Gowun/GowunBatang-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Ongul';
+  src: url('./fonts/Ongul/Ongul.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
 
 body {
   margin: 0;

@@ -1,7 +1,5 @@
 .homeContainer {
-  // padding: 20px 20px 150px 20px;
   background: #fff;
-  // margin: 0 auto;
   overflow: hidden;
   &.isDesktop {
     .homeWrap {
@@ -16,9 +14,6 @@
             max-height: auto;
             object-fit: cover;
             aspect-ratio: 1/1.4;
-            // min-height: auto;
-            // max-height: 1200px;
-            // aspect-ratio: 761/600;
           }
         }
         .progressWrap {
@@ -42,7 +37,7 @@
           }
         }
         .logoWrap {
-          bottom: 15%;
+          bottom: 7%;
           img {
             width: 120px;
           }
@@ -123,7 +118,7 @@
       }
     }
     .contentWrap {
-      padding: 50px 0 80px;
+      padding: 50px 0;
       display: flex;
       gap: 50px;
       flex-direction: column;

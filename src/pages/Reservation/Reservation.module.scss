@@ -1,5 +1,40 @@
 .resContainer {
   min-height: calc(100vh - 200px);
+  .resBtnWrap {
+    padding: 20px 0;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .resTitleWrap {
+      text-align: center;
+      div {
+        color: #3a3e41;
+      }
+      div:first-child {
+        font-weight: 500;
+        font-size: 25px;
+        font-family: "Uhbee";
+      }
+      div:last-child {
+        padding: 10px 0 0;
+        font-size: 14px;
+      }
+    }
+    .resBtn {
+      padding: 10px 50px;
+      border-radius: 50px;
+      background: #3a3e41;
+      color: #fff;
+      font-family: "UhBee";
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 24px;
+      letter-spacing: 3px;
+      cursor: pointer;
+    }
+  }
   .alertWrap {
     padding: 20px 0;
     text-align: center;
